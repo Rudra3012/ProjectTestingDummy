@@ -1,0 +1,18 @@
+{%  load unicorn %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Create Crossword Automatic</title>
+    <link rel="stylesheet" href="{% static 'crosswordCreation/style.css' %}">
+
+    {% unicorn_scripts %}
+</head>
+<body class="creation_body">
+    {%  csrf_token %}
+    <main>
+        {% unicorn 'createCrosswordAuto' username=Username %}
+    </main>
+</body>
+</html>

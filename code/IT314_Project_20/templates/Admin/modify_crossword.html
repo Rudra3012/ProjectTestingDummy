@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Modify Crossword</title>
+    <style>
+        /* Reset default margin and padding */
+
+        body,
+        table {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            flex-direction: column;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        /* Style for h1 and h2 headings */
+
+        h1,
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #031f77;
+            text-align: center;
+        }
+
+        /* Style for form */
+        form {
+            height: 450px;
+            width: 420px;
+            /* background-color: #031f77; */
+            background-color: #01285e;
+            /* {#background-color: rgba(255,255,255,0.13);#}
+            background-color:  #01285e; */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(227, 12, 12, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+
+        }
+
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        /* Style for labels */
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Style for input fields */
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            color: #ffffff;
+        }
+
+        
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* Hover effect for submit button */
+        input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+
+        /* Style for container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        button {
+            margin-top: 50px;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social {
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .social div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            text-align: center;
+        }
+
+        .social div:hover {
+            background-color: rgba(255, 255, 255, 0.47);
+        }
+
+        .social .fb {
+            margin-left: 25px;
+        }
+
+        .social i {
+            margin-right: 4px;
+        }
+        select option{
+            color: black;
+            font-weight : bold;
+        }
+        #crossword-difficulty {
+            background-color: #a1c4fd;
+            color: #ffffff;
+            padding: 8px;
+            border-color: #031f77;
+            border-radius: 3px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modify Crossword</h1>
+    <form id="modify-crossword-form" method="post">
+        <label for="crossword-id">ID:</label>
+        <input type="text" id="crossword-id" name="crossword-id" readonly>
+        <label for="crossword-title">Title:</label>
+        <input type="text" id="crossword-title" name="crossword-title">
+        <label for="crossword-difficulty">Difficulty:</label>
+        <select id="crossword-difficulty" name="crossword-difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <input type="submit" value="Save">
+    </form>
+
+</body>
+
+</html>
