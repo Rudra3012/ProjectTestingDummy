@@ -27,4 +27,4 @@ jobs:
         pip install -r code/IT314_Project_20/requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python code/IT314_Project_20/manage.py test
