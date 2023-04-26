@@ -201,6 +201,10 @@ class CreatecrosswordautoView(UnicornView):
 
         newCrossword = Crossword(self.username, self.title, self.description, self.columns, self.rows, verClues,horClues, self.wordsHorizontal, self.wordsVertical, self.crossword_grid, self.wordsHorizontalStart, self.wordsVerticalStart)
         print("New crossword: ", newCrossword)
+        
+        print("here")
+        
+        print(newCrossword.check())
         collections.insert_one(newCrossword.__dict__)
 
         self.displayMessage = "yes"

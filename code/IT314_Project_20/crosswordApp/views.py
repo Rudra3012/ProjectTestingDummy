@@ -19,8 +19,8 @@ client = MongoClient("mongodb+srv://Group20:Group20@cluster0.vl47pk0.mongodb.net
 db = client['CrossWordManagement']
 
 
-def testMe(a):
-    return a%2
+# def testMe(a):
+#     return a%2
 
 def SignupPage(request):
     collections = db['crosswordApp_user']
@@ -431,8 +431,8 @@ def solve_crossword(request, crossword_id):
     # 6442e9c5401d19b1b87a0c2c
     return render(request, "solveCrossword/solveCrossword.html", context)
 
-def test_timer(request):
-    return render(request, "test_timer.html")
+# def test_timer(request):
+#     return render(request, "test_timer.html")
 
 def delete_user(request, delt):
     collections = db['crosswordApp_user']
