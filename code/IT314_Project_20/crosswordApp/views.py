@@ -19,6 +19,9 @@ client = MongoClient("mongodb+srv://Group20:Group20@cluster0.vl47pk0.mongodb.net
 db = client['CrossWordManagement']
 
 
+def testMe(a):
+    return a%2
+
 def SignupPage(request):
     collections = db['crosswordApp_user']
     if request.method == 'POST':
